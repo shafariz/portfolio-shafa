@@ -1,0 +1,661 @@
+/* =================================
+   DESKTOP NAVBAR
+================================= */
+
+.navbar-custom {
+
+  position: fixed;
+
+  top: 20px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 1000;
+
+  width:
+    min(
+      1100px,
+      calc(100% - 40px)
+    );
+
+  border:
+    1px solid
+    rgba(
+      255,
+      101,
+      163,
+      0.25
+    );
+
+  border-radius: 999px;
+
+  background:
+    rgba(
+      14,
+      9,
+      22,
+      0.85
+    );
+
+  backdrop-filter:
+    blur(18px);
+
+  box-shadow:
+
+    0 8px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.50
+    );
+}
+
+
+.navbar-header-row {
+
+  width: 100%;
+
+  height: 64px;
+
+  padding:
+    0 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.navbar-logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color:
+    var(--text-main);
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+
+.navbar-logo-star {
+
+  color:
+    var(--pink-deep);
+
+  font-size: 18px;
+}
+
+
+/* =================================
+   DESKTOP MENU
+================================= */
+
+.navbar-menu {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+
+.navbar-link {
+
+  position: relative;
+
+  padding:
+    8px 14px;
+
+  color:
+    var(--text-soft);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-radius: 999px;
+
+  transition:
+
+    color 0.2s ease,
+
+    background-color 0.2s ease,
+
+    transform 0.2s ease;
+}
+
+
+.navbar-link:hover {
+
+  color:
+    var(--pink-soft);
+
+  background-color:
+    rgba(
+      255,
+      42,
+      133,
+      0.15
+    );
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* =================================
+   CONTACT
+================================= */
+
+.navbar-contact {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    9px 18px;
+
+  border-radius: 999px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+
+      var(--pink),
+
+      var(--pink-deep)
+    );
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+
+    transform 0.2s ease,
+
+    box-shadow 0.2s ease;
+}
+
+
+.navbar-contact:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+
+    0 6px 20px
+    rgba(
+      255,
+      42,
+      133,
+      0.35
+    );
+}
+
+
+/* =================================
+   HAMBURGER
+================================= */
+
+.navbar-toggle {
+
+  display: none;
+
+  width: 40px;
+
+  height: 40px;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      255,
+      42,
+      133,
+      0.15
+    );
+
+  cursor: pointer;
+
+  transition:
+    0.2s ease;
+}
+
+
+.navbar-toggle span {
+
+  display: block;
+
+  width: 18px;
+
+  height: 2px;
+
+  border-radius: 999px;
+
+  background:
+    var(--pink-deep);
+
+  transition:
+    0.25s ease;
+}
+
+
+/* =================================
+   HAMBURGER TO X
+================================= */
+
+.navbar-toggle.active
+span:nth-child(1) {
+
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+
+.navbar-toggle.active
+span:nth-child(2) {
+
+  opacity: 0;
+}
+
+
+.navbar-toggle.active
+span:nth-child(3) {
+
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* =================================
+   MOBILE DROPDOWN MENU (TOP-DOWN)
+================================= */
+
+.mobile-menu {
+
+  position: absolute;
+
+  top: calc(100% + 10px);
+
+  left: 0;
+
+  right: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  padding:
+    14px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  border-radius: 24px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      101,
+      163,
+      0.30
+    );
+
+  background:
+    rgba(
+      16,
+      11,
+      25,
+      0.95
+    );
+
+  backdrop-filter:
+    blur(20px);
+
+  box-shadow:
+
+    0 20px 45px
+    rgba(
+      0,
+      0,
+      0,
+      0.60
+    );
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateY(-12px);
+
+  transition:
+
+    opacity 0.3s ease,
+
+    transform 0.3s ease,
+
+    visibility 0.3s ease;
+}
+
+
+.mobile-menu.show {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(0);
+}
+
+
+/* =================================
+   MOBILE LINKS
+================================= */
+
+.mobile-menu-links {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.mobile-menu-link {
+
+  display: grid;
+
+  grid-template-columns:
+    32px
+    1fr
+    20px;
+
+  align-items: center;
+
+  padding:
+    12px 14px;
+
+  border-radius: 14px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      101,
+      163,
+      0.12
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.03
+    );
+
+  color:
+    var(--text-main);
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+
+    background 0.2s ease,
+
+    border-color 0.2s ease,
+
+    color 0.2s ease;
+}
+
+
+.mobile-menu-link:hover {
+
+  background:
+    rgba(
+      255,
+      42,
+      133,
+      0.15
+    );
+
+  border-color:
+    rgba(
+      255,
+      101,
+      163,
+      0.35
+    );
+
+  color:
+    var(--pink-soft);
+}
+
+
+.mobile-menu-number {
+
+  color:
+    var(--pink-deep);
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.mobile-menu-arrow {
+
+  color:
+    var(--pink);
+
+  font-size: 14px;
+}
+
+
+/* =================================
+   MOBILE CONTACT
+================================= */
+
+.mobile-menu-contact {
+
+  margin-top: 4px;
+
+  padding:
+    13px 18px;
+
+  border-radius: 999px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      var(--pink),
+      var(--pink-deep)
+    );
+
+  color: white;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  box-shadow:
+
+    0 6px 20px
+    rgba(
+      255,
+      42,
+      133,
+      0.35
+    );
+}
+
+
+/* =================================
+   OVERLAY
+================================= */
+
+.mobile-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 950;
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      0.50
+    );
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+
+    opacity 0.3s ease,
+
+    visibility 0.3s ease;
+}
+
+
+.mobile-overlay.show {
+
+  opacity: 1;
+
+  visibility: visible;
+}
+
+
+/* =================================
+   MOBILE BREAKPOINT
+================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-custom {
+
+    top: 12px;
+
+    width:
+      calc(100% - 24px);
+  }
+
+
+  .navbar-header-row {
+
+    height: 56px;
+
+    padding:
+      0 14px;
+  }
+
+
+  .navbar-menu,
+  .navbar-contact {
+
+    display: none;
+  }
+
+
+  .navbar-toggle {
+
+    display: flex;
+  }
+
+
+  .navbar-logo {
+
+    font-size: 16px;
+  }
+
+
+  .navbar-logo-star {
+
+    font-size: 17px;
+  }
+
+}
+
+
+/* =================================
+   VERY SMALL SCREEN
+================================= */
+
+@media (max-width: 380px) {
+
+  .navbar-custom {
+
+    width:
+      calc(100% - 18px);
+  }
+
+}

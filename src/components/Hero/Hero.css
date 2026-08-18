@@ -1,0 +1,697 @@
+/* =================================
+   HERO COVER
+================================= */
+
+.hero-cover {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    var(--black);
+
+  box-shadow:
+    0 20px 50px
+    rgba(
+      0,
+      0,
+      0,
+      0.60
+    );
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding:
+    120px
+    24px
+    80px;
+
+  background:
+
+    radial-gradient(
+      circle at 15% 20%,
+
+      rgba(
+        255,
+        42,
+        133,
+        0.18
+      ),
+
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 85% 80%,
+
+      rgba(
+        168,
+        85,
+        247,
+        0.20
+      ),
+
+      transparent 35%
+    ),
+
+    var(--black);
+}
+
+
+/* =================================
+   CONTAINER
+================================= */
+
+.hero-container {
+
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.hero-content {
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =================================
+   GREETING
+================================= */
+
+.hero-greeting {
+
+  margin:
+    0
+    0
+    18px;
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color:
+    var(--pink-deep);
+
+  letter-spacing: 1px;
+}
+
+
+/* =================================
+   TITLE
+================================= */
+
+.hero-title {
+
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      52px,
+      7vw,
+      88px
+    );
+
+  font-weight: 600;
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+
+  color:
+    var(--text-main);
+}
+
+
+.name-pink {
+
+  color:
+    var(--pink-deep);
+
+  text-shadow: 0 0 20px rgba(255, 42, 133, 0.35);
+}
+
+
+.name-black {
+
+  color:
+    var(--text-main);
+}
+
+
+/* =================================
+   ROLE
+================================= */
+
+.hero-role {
+
+  margin:
+    24px
+    0
+    0;
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  font-size:
+    clamp(
+      14px,
+      2vw,
+      18px
+    );
+
+  font-weight: 500;
+
+  color:
+    var(--text-soft);
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.hero-buttons {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 38px;
+}
+
+
+.hero-btn {
+
+  min-width: 145px;
+
+  padding:
+    13px
+    24px;
+
+  border-radius: 999px;
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  text-align: center;
+
+  transition:
+
+    transform 0.25s ease,
+
+    box-shadow 0.25s ease,
+
+    background 0.25s ease;
+}
+
+
+/* =================================
+   PRIMARY
+================================= */
+
+.hero-btn-primary {
+
+  background:
+
+    linear-gradient(
+      135deg,
+      var(--pink),
+      var(--pink-deep)
+    );
+
+  color: white;
+
+  box-shadow:
+
+    0 8px 25px
+    rgba(
+      255,
+      42,
+      133,
+      0.32
+    );
+}
+
+
+.hero-btn-primary:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+
+    0 12px 30px
+    rgba(
+      255,
+      42,
+      133,
+      0.45
+    );
+}
+
+
+/* =================================
+   SECONDARY
+================================= */
+
+.hero-btn-secondary {
+
+  border:
+    1px solid
+    rgba(255, 101, 163, 0.35);
+
+  background:
+    rgba(22, 15, 30, 0.7);
+
+  color:
+    var(--pink-soft);
+
+  backdrop-filter: blur(8px);
+}
+
+
+.hero-btn-secondary:hover {
+
+  transform:
+    translateY(-3px);
+
+  background:
+    rgba(255, 42, 133, 0.18);
+
+  border-color:
+    var(--pink);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(255, 42, 133, 0.25);
+}
+
+
+/* =================================
+   SCROLL INDICATOR
+================================= */
+
+.hero-scroll {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 90px;
+}
+
+
+/* =================================
+   SCROLL TEXT
+================================= */
+
+.hero-scroll-text {
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+
+  background:
+    linear-gradient(
+      90deg,
+      #df5f91,
+      #f59abb,
+      #9874bd,
+      #df5f91
+    );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    scrollRainbow 4s
+    linear infinite;
+}
+
+
+/* =================================
+   ARROW
+================================= */
+
+.hero-scroll-arrow {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  font-size: 24px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      #df5f91,
+      #f59abb,
+      #9874bd,
+      #df5f91
+    );
+
+  background-size:
+    100%
+    200%;
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    arrowRainbow 3s
+    linear infinite;
+}
+
+
+/* =================================
+   RAINBOW ANIMATION
+================================= */
+
+@keyframes scrollRainbow {
+
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+
+}
+
+
+@keyframes arrowRainbow {
+
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 0% 200%;
+  }
+
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+
+    padding:
+      120px
+      24px
+      70px;
+  }
+
+
+  .hero-title {
+
+    font-size:
+      clamp(
+        50px,
+        8vw,
+        72px
+      );
+
+    letter-spacing:
+      -1.5px;
+  }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+  .hero-cover {
+
+    height: 100svh;
+  }
+
+
+  .hero {
+
+    min-height: 100svh;
+
+    padding:
+      110px
+      20px
+      50px;
+  }
+
+
+  .hero-title {
+
+    font-size:
+      clamp(
+        42px,
+        11vw,
+        58px
+      );
+
+    letter-spacing:
+      -1.5px;
+
+    line-height: 1;
+  }
+
+
+  .hero-greeting {
+
+    margin-bottom: 14px;
+
+    font-size: 13px;
+  }
+
+
+  .hero-role {
+
+    max-width: 320px;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+
+  .hero-buttons {
+
+    width: 100%;
+
+    gap: 10px;
+
+    margin-top: 30px;
+  }
+
+
+  .hero-btn {
+
+    min-width: 0;
+
+    flex: 1;
+
+    padding:
+      13px
+      16px;
+
+    font-size: 12px;
+  }
+
+
+  /* =============================
+     MOBILE SCROLL
+  ============================= */
+
+  .hero-scroll {
+
+    margin-top: 70px;
+
+    gap: 6px;
+  }
+
+
+  .hero-scroll-text {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .hero-scroll-arrow {
+
+    font-size: 22px;
+  }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+
+  .hero {
+
+    padding-left: 16px;
+
+    padding-right: 16px;
+
+    padding-bottom: 45px;
+  }
+
+
+  .hero-title {
+
+    font-size: 36px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .hero-role {
+
+    font-size: 13px;
+  }
+
+
+  .hero-btn {
+
+    padding:
+      12px
+      10px;
+
+    font-size: 11px;
+  }
+
+
+  .hero-scroll {
+
+    margin-top: 60px;
+  }
+
+
+  .hero-scroll-text {
+
+    font-size: 7px;
+
+    letter-spacing: 1.7px;
+  }
+
+
+  .hero-scroll-arrow {
+
+    font-size: 20px;
+  }
+
+}

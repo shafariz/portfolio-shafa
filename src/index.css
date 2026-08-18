@@ -1,0 +1,80 @@
+@import url(
+  "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+);
+
+@import "tailwindcss";
+
+@plugin "daisyui";
+
+
+/* =================================
+   ROOT VARIABLES
+================================= */
+
+:root {
+  --black: #0a070d;
+  --black-soft: #130c1a;
+  --black-card: rgba(20, 13, 28, 0.75);
+  
+  --pink-light: rgba(255, 184, 214, 0.10);
+  --pink-soft: #fca1c7;
+  --pink: #ff65a3;
+  --pink-deep: #ff2a85;
+  
+  --lavender: #e2c6ff;
+  --purple: #a855f7;
+  --purple-deep: #6b21a8;
+  
+  --cream: #0a070d;
+  --text-dark: #f8f5fa;
+  --text-soft: #bdaec6;
+  --text-main: #f8f5fa;
+  --text-muted: #bdaec6;
+}
+
+
+/* =================================
+   GLOBAL RESET
+================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =================================
+   HTML
+================================= */
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  background-color: var(--black);
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--black);
+  color: var(--text-main);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+
+/* =================================
+   ROOT
+================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--black);
+}

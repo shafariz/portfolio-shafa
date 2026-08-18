@@ -1,0 +1,108 @@
+/* =================================
+   HOME REVEAL CONTAINER
+================================= */
+
+.home-reveal {
+
+  position: relative;
+
+  width: 100%;
+
+  /*
+  Area scroll untuk membuka Home.
+  */
+
+  height: 200vh;
+
+  overflow: visible;
+}
+
+
+/* =================================
+   PAGES DI BELAKANG HOME
+================================= */
+
+.pages-layer {
+
+  /*
+  About tetap menempel pada
+  viewport ketika Home bergerak.
+  */
+
+  position: sticky;
+
+  top: 0;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  z-index: 1;
+
+  background:
+    var(--black);
+}
+
+
+/* =================================
+   HOME SEBAGAI COVER
+================================= */
+
+.home-layer {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100vh;
+
+  z-index: 10;
+
+  will-change:
+    transform;
+
+  pointer-events: none;
+}
+
+
+/* =================================
+   HERO TETAP BISA DIKLIK
+================================= */
+
+.home-layer > * {
+
+  pointer-events: auto;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+  .home-reveal {
+
+    height: 200vh;
+
+  }
+
+
+  .pages-layer {
+
+    min-height: 100svh;
+
+  }
+
+
+  .home-layer {
+
+    height: 100svh;
+
+  }
+
+}

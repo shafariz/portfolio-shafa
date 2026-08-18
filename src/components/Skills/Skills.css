@@ -1,0 +1,848 @@
+/* =================================
+   SKILLS SECTION
+================================= */
+
+.skills-section {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding:
+    95px
+    0;
+
+  background:
+
+    linear-gradient(
+      180deg,
+
+      rgba(22, 13, 34, 0.7) 0%,
+
+      rgba(34, 18, 52, 0.45) 40%,
+
+      rgba(26, 14, 40, 0.55) 75%,
+
+      rgba(14, 9, 22, 0.8) 100%
+    );
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.skills-header {
+
+  width:
+    min(
+      720px,
+      calc(100% - 40px)
+    );
+
+  margin:
+    0
+    auto
+    75px;
+
+  text-align: center;
+}
+
+
+/* =================================
+   LABEL
+================================= */
+
+.skills-label {
+
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+  color:
+    var(--pink-deep);
+}
+
+
+/* =================================
+   TITLE
+================================= */
+
+.skills-title {
+
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      52px,
+      6vw,
+      72px
+    );
+
+  font-weight: 600;
+
+  line-height: 0.95;
+
+  letter-spacing: -1.5px;
+
+  color:
+    var(--text-main);
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.skills-description {
+
+  max-width: 520px;
+
+  margin:
+    22px
+    auto
+    0;
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.8;
+
+  color:
+    var(--text-soft);
+}
+
+
+/* =================================
+   MARQUEE WRAPPER
+================================= */
+
+.skills-marquee-wrapper {
+
+  width: 100%;
+
+  overflow: hidden;
+
+  /*
+    Desktop:
+    wheel dapat digunakan
+    untuk horizontal scrolling.
+  */
+
+  cursor:
+    grab;
+
+}
+
+
+/* =================================
+   MARQUEE
+================================= */
+
+.skills-marquee {
+
+  width: 100%;
+
+  overflow: hidden;
+
+  padding:
+    20px
+    0;
+
+  mask-image:
+    linear-gradient(
+      to right,
+
+      transparent,
+
+      black 8%,
+
+      black 92%,
+
+      transparent
+    );
+
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+
+      transparent,
+
+      black 8%,
+
+      black 92%,
+
+      transparent
+    );
+}
+
+
+/* =================================
+   TRACK
+================================= */
+
+.skills-track {
+
+  width: max-content;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  padding:
+    10px
+    0;
+
+  will-change:
+    transform;
+
+  cursor:
+    grab;
+
+  user-select:
+    none;
+
+  /*
+    Mobile:
+    memungkinkan swipe horizontal
+    tanpa mengganggu scroll vertikal.
+  */
+
+  touch-action:
+    pan-y;
+}
+
+
+/* =================================
+   SKILL BUBBLE
+================================= */
+
+.skill-bubble {
+
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 190px;
+
+  height: 100px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  padding:
+    18px
+    28px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      101,
+      163,
+      0.24
+    );
+
+  border-radius:
+    999px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+
+      rgba(
+        24,
+        15,
+        34,
+        0.80
+      ),
+
+      rgba(
+        42,
+        22,
+        58,
+        0.70
+      )
+    );
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+
+    0 12px 35px
+    rgba(
+      168,
+      85,
+      247,
+      0.16
+    ),
+
+    inset 0 1px 0
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  color:
+    var(--text-main);
+
+  transition:
+
+    transform 0.3s ease,
+
+    box-shadow 0.3s ease,
+
+    border-color 0.3s ease;
+}
+
+
+/* =================================
+   BUBBLE DECORATION
+================================= */
+
+.skill-bubble::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 10px;
+
+  left: 28px;
+
+  width: 34px;
+
+  height: 10px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+
+  transform:
+    rotate(-8deg);
+}
+
+
+/* =================================
+   HOVER
+================================= */
+
+.skill-bubble:hover {
+
+  transform:
+    translateY(-8px)
+    scale(1.03);
+
+  border-color:
+    rgba(
+      255,
+      101,
+      163,
+      0.55
+    );
+
+  box-shadow:
+
+    0 18px 45px
+    rgba(
+      255,
+      42,
+      133,
+      0.30
+    );
+}
+
+
+/* =================================
+   ICON WRAPPER
+================================= */
+
+.skill-icon-wrapper {
+
+  width: 48px;
+
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.92
+    );
+
+  box-shadow:
+
+    0 5px 15px
+    rgba(
+      0,
+      0,
+      0,
+      0.35
+    );
+}
+
+
+/* =================================
+   ICON
+================================= */
+
+.skill-icon {
+
+  width: 30px;
+
+  height: 30px;
+
+  object-fit: contain;
+
+  pointer-events:
+    none;
+}
+
+
+/* =================================
+   SKILL NAME
+================================= */
+
+.skill-name {
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  color:
+    var(--text-main);
+
+  white-space:
+    nowrap;
+}
+
+
+/* =================================
+   DRAG HINT
+================================= */
+
+.skills-drag-hint {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  color:
+    var(--pink-deep);
+
+  opacity:
+    0.65;
+}
+
+
+.skills-drag-hint p {
+
+  margin: 0;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+.skills-drag-hint span {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 22px;
+
+  line-height: 1;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+  .skills-section {
+
+    padding:
+      100px
+      0;
+  }
+
+
+  .skills-header {
+
+    margin-bottom: 60px;
+  }
+
+
+  .skills-title {
+
+    font-size:
+      clamp(
+        48px,
+        8vw,
+        64px
+      );
+  }
+
+
+  .skill-bubble {
+
+    width: 175px;
+
+    height: 92px;
+
+    gap: 12px;
+
+    padding:
+      16px
+      23px;
+  }
+
+
+  .skill-icon-wrapper {
+
+    width: 44px;
+
+    height: 44px;
+  }
+
+
+  .skill-icon {
+
+    width: 27px;
+
+    height: 27px;
+  }
+
+
+  .skill-name {
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+  .skills-section {
+
+    min-height: auto;
+
+    padding:
+      90px
+      0
+      100px;
+  }
+
+
+  .skills-header {
+
+    width:
+      calc(
+        100% - 40px
+      );
+
+    margin-bottom: 45px;
+  }
+
+
+  .skills-label {
+
+    margin-bottom: 14px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .skills-title {
+
+    font-size:
+      clamp(
+        44px,
+        13vw,
+        56px
+      );
+
+    letter-spacing:
+      -1px;
+  }
+
+
+  .skills-description {
+
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+
+  .skills-marquee {
+
+    padding:
+      15px
+      0;
+  }
+
+
+  .skills-track {
+
+    gap: 16px;
+
+    padding:
+      8px
+      0;
+
+    touch-action:
+      pan-y;
+  }
+
+
+  .skill-bubble {
+
+    width: 160px;
+
+    height: 82px;
+
+    gap: 10px;
+
+    padding:
+      14px
+      19px;
+  }
+
+
+  .skill-icon-wrapper {
+
+    width: 40px;
+
+    height: 40px;
+  }
+
+
+  .skill-icon {
+
+    width: 24px;
+
+    height: 24px;
+  }
+
+
+  .skill-name {
+
+    font-size: 11px;
+  }
+
+
+  .skill-bubble::before {
+
+    top: 8px;
+
+    left: 22px;
+
+    width: 27px;
+
+    height: 8px;
+  }
+
+
+  .skills-drag-hint {
+
+    margin-top: 24px;
+  }
+
+
+  .skills-drag-hint p {
+
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+  }
+
+
+  .skills-drag-hint span {
+
+    font-size: 19px;
+  }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+
+  .skills-section {
+
+    padding:
+      75px
+      0
+      85px;
+  }
+
+
+  .skills-header {
+
+    width:
+      calc(
+        100% - 32px
+      );
+  }
+
+
+  .skills-title {
+
+    font-size:
+      42px;
+  }
+
+
+  .skills-description {
+
+    font-size:
+      11px;
+  }
+
+
+  .skill-bubble {
+
+    width:
+      145px;
+
+    height:
+      76px;
+
+    gap:
+      8px;
+
+    padding:
+      12px
+      16px;
+  }
+
+
+  .skill-icon-wrapper {
+
+    width:
+      36px;
+
+    height:
+      36px;
+  }
+
+
+  .skill-icon {
+
+    width:
+      21px;
+
+    height:
+      21px;
+  }
+
+
+  .skill-name {
+
+    font-size:
+      10px;
+  }
+
+
+  .skills-track {
+
+    gap:
+      14px;
+  }
+
+}

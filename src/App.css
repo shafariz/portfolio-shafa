@@ -1,0 +1,40 @@
+.portfolio-main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: visible;
+  background-color: var(--black);
+}
+
+/* Continuous ambient background glows for About -> Skills -> Experience -> Projects */
+.portfolio-main::before {
+  content: "";
+  position: fixed;
+  top: 15vh;
+  right: -10vw;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(255, 42, 133, 0.05) 50%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.portfolio-main::after {
+  content: "";
+  position: fixed;
+  bottom: 20vh;
+  left: -10vw;
+  width: 55vw;
+  height: 55vw;
+  max-width: 650px;
+  max-height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 101, 163, 0.12) 0%, rgba(168, 85, 247, 0.05) 50%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
