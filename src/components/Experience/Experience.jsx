@@ -121,7 +121,29 @@ function Experience() {
             HEADER
         ================================= */}
 
-        <div className="experience-header">
+        <motion.div
+          className="experience-header"
+
+          initial={{
+            opacity: 0,
+            y: 25,
+          }}
+
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+
+          transition={{
+            duration: 0.85,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
 
           <span className="experience-label">
             MY JOURNEY
@@ -137,7 +159,7 @@ function Experience() {
             Activities and organizational roles that define my path.
           </p>
 
-        </div>
+        </motion.div>
 
 
         {/* =================================
@@ -166,7 +188,7 @@ function Experience() {
 
                 initial={{
                   opacity: 0,
-                  y: 35,
+                  y: 20,
                 }}
 
                 whileInView={{
@@ -176,13 +198,13 @@ function Experience() {
 
                 viewport={{
                   once: true,
-                  amount: 0.15,
+                  amount: 0.2,
                 }}
 
                 transition={{
-                  duration: 0.7,
-                  delay: index * 0.12,
-                  ease: "easeOut",
+                  duration: 0.85,
+                  delay: index * 0.1,
+                  ease: [0.16, 1, 0.3, 1],
                 }}
               >
 

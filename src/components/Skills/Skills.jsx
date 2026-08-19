@@ -205,7 +205,29 @@ function Skills() {
           HEADER
       ================================= */}
 
-      <div className="skills-header">
+      <motion.div
+        className="skills-header"
+
+        initial={{
+          opacity: 0,
+          y: 25,
+        }}
+
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+
+        transition={{
+          duration: 0.85,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+      >
 
         <span className="skills-label">
           WHAT I WORK WITH
@@ -221,7 +243,7 @@ function Skills() {
           Technologies I use to craft, analyze, and explore.
         </p>
 
-      </div>
+      </motion.div>
 
 
       {/* =================================

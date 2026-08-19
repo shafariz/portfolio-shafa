@@ -68,8 +68,8 @@ function Hero() {
             }}
 
             transition={{
-              duration: 0.8,
-              ease: "easeOut",
+              duration: 0.85,
+              ease: [0.16, 1, 0.3, 1],
             }}
           >
 

@@ -192,7 +192,7 @@ function Projects() {
 
                 initial={{
                   opacity: 0,
-                  y: 35,
+                  y: 20,
                 }}
 
                 whileInView={{
@@ -206,12 +206,12 @@ function Projects() {
                 }}
 
                 transition={{
-                  duration: 0.65,
+                  duration: 0.85,
 
                   delay:
-                    (index % 3) * 0.1,
+                    (index % 3) * 0.08,
 
-                  ease: "easeOut",
+                  ease: [0.16, 1, 0.3, 1],
                 }}
               >
 
