@@ -9,10 +9,12 @@
   width: 100%;
 
   /*
-  Area scroll untuk membuka Home.
+  Area scroll untuk membuka Home dengan ruang baca About.
   */
 
-  height: 200vh;
+  height: 220vh;
+
+  height: 220dvh;
 
   overflow: visible;
 }
@@ -37,6 +39,8 @@
 
   min-height: 100vh;
 
+  min-height: 100dvh;
+
   z-index: 1;
 
   background:
@@ -59,6 +63,8 @@
   width: 100%;
 
   height: 100vh;
+
+  height: 100dvh;
 
   z-index: 10;
 
@@ -87,21 +93,27 @@
 
   .home-reveal {
 
-    height: 200vh;
+    height: 210vh;
+
+    height: 210dvh;
 
   }
 
 
   .pages-layer {
 
-    min-height: 100svh;
+    min-height: 100vh;
+
+    min-height: 100dvh;
 
   }
 
 
   .home-layer {
 
-    height: 100svh;
+    height: 100vh;
+
+    height: 100dvh;
 
   }
 

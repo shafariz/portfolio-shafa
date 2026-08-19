@@ -36,9 +36,9 @@ function About({
 
     scrollProgress,
 
-    [0, 0.4],
+    [0, 0.55],
 
-    [0.72, 1]
+    [0.78, 1]
 
   );
 
