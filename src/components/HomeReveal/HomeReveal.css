@@ -9,12 +9,12 @@
   width: 100%;
 
   /*
-  Area scroll untuk membuka Home dengan ruang baca About.
+  Tinggi 200vh memberikan rentang 100vh agar About tetap DIAM di tempat (top: 0) saat Hero di-scroll.
   */
 
-  height: 220vh;
+  height: 200vh;
 
-  height: 220dvh;
+  height: 200dvh;
 
   overflow: visible;
 }
@@ -43,8 +43,7 @@
 
   z-index: 1;
 
-  background:
-    var(--black);
+  background: transparent;
 }
 
 
@@ -93,9 +92,9 @@
 
   .home-reveal {
 
-    height: 210vh;
+    height: 200vh;
 
-    height: 210dvh;
+    height: 200dvh;
 
   }
 

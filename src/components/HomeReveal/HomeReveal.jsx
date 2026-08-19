@@ -44,19 +44,17 @@ function HomeReveal() {
 
 
   /*
-    HOME MOVEMENT
-
-    Home bergerak dari:
-    0vh -> -100vh pada 0% - 65% scroll.
-    Sisa scroll 65% - 100% memberi ruang baca penuh untuk About
-    sebelum transisi halus ke Skills.
+    HERO MOVEMENT:
+    Hero bergerak dari 0vh ke -100vh pada 0 -> 0.5 scroll (100vh pertama).
+    Selama rentang ini, About DIAM di tempat (position: sticky; top: 0).
+    Tepat saat Hero hilang (-100vh), progress mencapai 0.5.
   */
 
   const heroY = useTransform(
 
     scrollYProgress,
 
-    [0, 0.65],
+    [0, 0.5],
 
     ["0vh", "-100vh"]
 
