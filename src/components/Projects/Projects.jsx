@@ -3,12 +3,12 @@ import { motion } from "motion/react";
 import StarBackground from "../StarBackground/StarBackground";
 import "./Projects.css";
 
-import posyanduImage from "../../assets/projects/posyandu.png";
-import favobooksImage from "../../assets/projects/favobooks.png";
-import oemahKeboenImage from "../../assets/projects/oemah-keboen.png";
-import kiloanImage from "../../assets/projects/kiloan.png";
-import airBersihImage from "../../assets/projects/air-bersih.png";
-import salbeautyImage from "../../assets/projects/salbeauty.png";
+import posyanduImage from "../../assets/projects/posyandu.webp";
+import favobooksImage from "../../assets/projects/favobooks.webp";
+import oemahKeboenImage from "../../assets/projects/oemah-keboen.webp";
+import kiloanImage from "../../assets/projects/kiloan.webp";
+import airBersihImage from "../../assets/projects/air-bersih.webp";
+import salbeautyImage from "../../assets/projects/salbeauty.webp";
 
 
 function Projects() {

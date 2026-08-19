@@ -293,6 +293,7 @@
   object-fit: cover;
 
   transition:
+
     transform 0.55s
     cubic-bezier(
       0.22,
@@ -332,6 +333,7 @@
   justify-content: center;
 
   background:
+
     rgba(
       10,
       7,
