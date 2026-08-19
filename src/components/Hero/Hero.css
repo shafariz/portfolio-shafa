@@ -876,10 +876,24 @@
 
     min-height: 100svh;
 
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
     padding:
-      110px
+      60px
       20px
-      50px;
+      40px;
+  }
+
+
+  .hero-container {
+
+    margin: 0 auto;
+
+    width: 100%;
   }
 
 
@@ -887,35 +901,33 @@
 
     font-size:
       clamp(
-        42px,
-        11vw,
-        58px
+        38px,
+        10vw,
+        56px
       );
 
     letter-spacing:
       -1.5px;
 
-    line-height: 1;
+    line-height: 1.05;
   }
 
 
-  .hero-greeting {
+  .hero-badge {
 
-    margin-bottom: 14px;
+    margin-bottom: 16px;
+  }
+
+
+  .hero-subtitle {
+
+    margin-top: 14px;
 
     font-size: 13px;
-  }
-
-
-  .hero-role {
-
-    max-width: 320px;
-
-    margin-top: 20px;
-
-    font-size: 14px;
 
     line-height: 1.5;
+
+    max-width: 320px;
   }
 
 
@@ -931,11 +943,13 @@
 
     width: 100%;
 
+    max-width: 320px;
+
+    margin: 26px auto 0;
+
     justify-content: center;
 
     gap: 10px;
-
-    margin-top: 30px;
   }
 
 
