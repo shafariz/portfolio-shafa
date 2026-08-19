@@ -164,9 +164,7 @@ function Projects() {
 
 
           <p className="projects-description">
-            A collection of projects I've
-            worked on through learning,
-            collaboration, and exploration.
+            A showcase of my recent work, explorations, and team collaborations.
           </p>
 
         </motion.div>

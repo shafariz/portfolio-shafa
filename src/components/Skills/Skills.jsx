@@ -211,9 +211,7 @@ function Skills() {
 
 
         <p className="skills-description">
-          Technologies and tools I use to
-          build, explore, and bring ideas
-          into something meaningful.
+          Technologies I use to craft, analyze, and explore.
         </p>
 
       </div>

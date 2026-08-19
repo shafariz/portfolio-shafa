@@ -54,9 +54,7 @@ function Contact() {
 
 
           <p className="contact-description">
-            Have an idea, opportunity, or
-            just want to say hello?
-            Feel free to reach out.
+            Reach out for opportunities or a quick chat
           </p>
 
 

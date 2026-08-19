@@ -98,7 +98,7 @@ function About({
           {/* TITLE */}
 
           <h2 className="about-title">
-            A Little About Me
+            Who I Am
           </h2>
 
 
@@ -114,16 +114,10 @@ function About({
               </strong>
 
               , an Information Systems student at Universitas Mulawarman 
-              with an interest in Front-End Development and Data Analytics. 
-              I enjoy creating engaging digital experiences and exploring 
-              how technology can solve real-world problems.
-            </p>
-
-
-            <p>
-              I'm always excited to learn new things, work on creative projects, 
-              and collaborate with others. I enjoy turning ideas into meaningful 
-              projects while continuously improving my skills.
+              with a strong interest in Front-End Development and Data Analytics. 
+              I love turning ideas into engaging digital experiences, 
+              collaborating on creative projects, and exploring how 
+              technology can solve real-world problems. 
             </p>
 
           </div>

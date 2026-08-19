@@ -128,10 +128,7 @@ function Experience() {
 
 
           <p className="experience-description">
-            A collection of experiences,
-            activities, and opportunities
-            that have shaped my journey
-            along the way.
+            Activities and organizational roles that define my path.
           </p>
 
         </div>
