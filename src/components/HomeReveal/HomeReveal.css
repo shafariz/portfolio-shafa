@@ -9,7 +9,10 @@
   width: 100%;
 
   /*
-  Tinggi 200vh memberikan rentang 100vh agar About tetap DIAM di tempat (top: 0) saat Hero di-scroll.
+  Tinggi 200vh:
+  - 0-100vh: Hero di-scroll naik, About DIAM 100% DI TEMPAT (top: 0) & sama sekali tidak ikut kescroll.
+  - 100vh: Hero hilang total (-100vh) & About zoom mentok 1.0.
+  - 100-200vh: About mengalir ke Skills yang langsung nempel di bawahnya.
   */
 
   height: 200vh;

@@ -45,9 +45,9 @@ function HomeReveal() {
 
   /*
     HERO MOVEMENT:
-    Hero bergerak dari 0vh ke -100vh pada 0 -> 0.5 scroll (100vh pertama).
-    Selama rentang ini, About DIAM di tempat (position: sticky; top: 0).
-    Tepat saat Hero hilang (-100vh), progress mencapai 0.5.
+    1. Hero di-scroll -> bergeser naik dari 0vh ke -100vh (0 -> 0.5 progress).
+    2. Selama rentang 100vh ini, About DIAM 100% DI TEMPAT (position: sticky) & tidak kescroll.
+    3. Tepat saat progress 0.5 (Hero hilang total di -100vh), About zoom mentok 1.0 dan langsung nempel ke Skills.
   */
 
   const heroY = useTransform(
