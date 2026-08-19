@@ -6,42 +6,7 @@ import "./About.css";
 import shafaPhoto from "../../assets/shafa.jpg";
 
 
-function About({
-  scrollProgress,
-}) {
-
-  /*
-    =================================
-    ABOUT CONTENT SCALE
-    =================================
-
-    Hanya isi About yang dianimasikan.
-
-    0%
-      ↓
-    About kecil
-
-    40%
-      ↓
-    About sudah ukuran normal
-
-    Setelah 40%:
-    scale tetap 1.
-
-    Jadi ketika Hero sudah hilang,
-    About tidak melakukan zoom lagi.
-  */
-
-  const aboutContentScale = useTransform(
-
-    scrollProgress,
-
-    [0, 0.5],
-
-    [0.72, 1]
-
-  );
-
+function About() {
 
   return (
 
@@ -55,12 +20,8 @@ function About({
       ================================= */}
       <StarBackground sectionIndex={0} />
 
-      <motion.div
+      <div
         className="about-container"
-
-        style={{
-          scale: aboutContentScale,
-        }}
       >
 
         {/* =================================
@@ -130,7 +91,7 @@ function About({
 
         </div>
 
-      </motion.div>
+      </div>
 
     </section>
 

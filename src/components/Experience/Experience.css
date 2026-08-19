@@ -17,16 +17,7 @@
   overflow: hidden;
 
   background:
-
-    linear-gradient(
-      180deg,
-
-      rgba(14, 9, 22, 0.8) 0%,
-
-      rgba(22, 13, 34, 0.65) 50%,
-
-      rgba(18, 10, 28, 0.75) 100%
-    );
+    var(--black);
 }
 
 

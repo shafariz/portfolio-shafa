@@ -21,16 +21,7 @@
   align-items: center;
 
   background:
-
-    linear-gradient(
-      180deg,
-
-      transparent 0%,
-
-      rgba(16, 10, 25, 0.3) 50%,
-
-      rgba(22, 13, 34, 0.7) 100%
-    );
+    var(--black);
 }
 
 

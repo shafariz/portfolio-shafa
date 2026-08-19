@@ -1,122 +1,13 @@
 /* =================================
-   HOME REVEAL CONTAINER
+   UNIFIED PAGE FLOW (ATAS BAWAH)
 ================================= */
 
-.home-reveal {
+.home-flow {
 
   position: relative;
 
   width: 100%;
 
-  /*
-  Tinggi 200vh:
-  - 0-100vh: Hero di-scroll naik, About DIAM 100% DI TEMPAT (top: 0) & sama sekali tidak ikut kescroll.
-  - 100vh: Hero hilang total (-100vh) & About zoom mentok 1.0.
-  - 100-200vh: About mengalir ke Skills yang langsung nempel di bawahnya.
-  */
-
-  height: 200vh;
-
-  height: 200dvh;
-
-  overflow: visible;
-}
-
-
-/* =================================
-   PAGES DI BELAKANG HOME
-================================= */
-
-.pages-layer {
-
-  /*
-  About tetap menempel pada
-  viewport ketika Home bergerak.
-  */
-
-  position: sticky;
-
-  top: 0;
-
-  width: 100%;
-
-  min-height: 100vh;
-
-  min-height: 100dvh;
-
-  z-index: 1;
-
-  background: transparent;
-}
-
-
-/* =================================
-   HOME SEBAGAI COVER
-================================= */
-
-.home-layer {
-
-  position: absolute;
-
-  top: 0;
-
-  left: 0;
-
-  width: 100%;
-
-  height: 100vh;
-
-  height: 100dvh;
-
-  z-index: 10;
-
-  will-change:
-    transform;
-
-  pointer-events: none;
-}
-
-
-/* =================================
-   HERO TETAP BISA DIKLIK
-================================= */
-
-.home-layer > * {
-
-  pointer-events: auto;
-}
-
-
-/* =================================
-   MOBILE
-================================= */
-
-@media (max-width: 768px) {
-
-  .home-reveal {
-
-    height: 200vh;
-
-    height: 200dvh;
-
-  }
-
-
-  .pages-layer {
-
-    min-height: 100vh;
-
-    min-height: 100dvh;
-
-  }
-
-
-  .home-layer {
-
-    height: 100vh;
-
-    height: 100dvh;
-
-  }
-
+  background:
+    var(--black);
 }

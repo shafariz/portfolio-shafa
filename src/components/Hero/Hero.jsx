@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 import { motion } from "motion/react";
 
+import Aurora from "../Aurora/Aurora";
+import StarBackground from "../StarBackground/StarBackground";
 import "./Hero.css";
 
 
@@ -32,18 +34,22 @@ function Hero() {
       id="home"
     >
 
-      <div 
+      <div
         className="hero"
         onClick={handleHeroClick}
       >
 
         {/* =================================
-            INTERACTIVE DREAMY GRADIENT LAYERS
+            REACT BITS AURORA BACKGROUND (ONLY)
         ================================= */}
         <div className="hero-gradient-bg" aria-hidden="true">
-          <div className={`hero-gradient-layer hero-pink-layer ${isSeparated ? "separated" : ""}`} />
-          <div className={`hero-gradient-layer hero-purple-layer ${isSeparated ? "separated" : ""}`} />
-          <div className={`hero-gradient-layer hero-lavender-layer ${isSeparated ? "separated" : ""}`} />
+          <StarBackground sectionIndex={-1} />
+          <Aurora
+            colorStops={["#ff2a85", "#a855f7", "#e2c6ff"]}
+            blend={0.8}
+            amplitude={1.8}
+            speed={1.0}
+          />
         </div>
 
         <div className="hero-container">
@@ -68,15 +74,15 @@ function Hero() {
           >
 
             {/* =================================
-                GREETING
+                TOP PILL BADGE
             ================================= */}
 
-            <motion.p
-              className="hero-greeting"
+            <motion.div
+              className="hero-badge"
 
               initial={{
                 opacity: 0,
-                y: 15,
+                y: 12,
               }}
 
               animate={{
@@ -90,13 +96,19 @@ function Hero() {
               }}
             >
 
-              Hello I'm
+              <span className="hero-badge-star">
+                ✦
+              </span>
 
-            </motion.p>
+              <span>
+                PORTFOLIO
+              </span>
+
+            </motion.div>
 
 
             {/* =================================
-                NAME
+                HEADLINE (FRAMER DUAL-TYPOGRAPHY)
             ================================= */}
 
             <motion.h1
@@ -118,25 +130,37 @@ function Hero() {
               }}
             >
 
-              <span className="name-pink">
-                Shafa
+              <span className="title-sans">
+                Turning
               </span>
 
               {" "}
 
-              <span className="name-black">
-                Rizqi Nur Wahidah
+              <span className="title-italic-accent pink-glow">
+                ideas
+              </span>
+
+              <br />
+
+              <span className="title-sans">
+                into
+              </span>
+
+              {" "}
+
+              <span className="title-italic-accent">
+                experiences.
               </span>
 
             </motion.h1>
 
 
             {/* =================================
-                ROLE
+                SUBTITLE
             ================================= */}
 
             <motion.p
-              className="hero-role"
+              className="hero-subtitle"
 
               initial={{
                 opacity: 0,
@@ -154,9 +178,11 @@ function Hero() {
               }}
             >
 
-              Information Systems Student
+              Exploring technology through design, development, and data.
 
             </motion.p>
+
+
 
 
             {/* =================================
@@ -206,57 +232,6 @@ function Hero() {
                 Contact
 
               </a>
-
-            </motion.div>
-
-
-            {/* =================================
-                SCROLL INDICATOR
-            ================================= */}
-
-            <motion.div
-              className="hero-scroll"
-
-              initial={{
-                opacity: 0,
-              }}
-
-              animate={{
-                opacity: 1,
-              }}
-
-              transition={{
-                duration: 0.8,
-                delay: 1,
-              }}
-            >
-
-              <span className="hero-scroll-text">
-
-                Scroll to discover more
-
-              </span>
-
-
-              <motion.span
-                className="
-                  hero-scroll-arrow
-                "
-
-                animate={{
-                  y: [0, 7, 0],
-                }}
-
-                transition={{
-                  duration: 1.4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-
-                ↓
-
-              </motion.span>
 
             </motion.div>
 
