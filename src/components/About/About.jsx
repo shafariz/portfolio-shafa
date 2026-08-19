@@ -1,5 +1,6 @@
 import { motion, useTransform } from "motion/react";
 
+import StarBackground from "../StarBackground/StarBackground";
 import "./About.css";
 
 import shafaPhoto from "../../assets/shafa.jpg";
@@ -48,6 +49,11 @@ function About({
       className="about-section"
       id="about"
     >
+
+      {/* =================================
+          DREAMY BACKGROUND STARS
+      ================================= */}
+      <StarBackground sectionIndex={0} />
 
       <motion.div
         className="about-container"

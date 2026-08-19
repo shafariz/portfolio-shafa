@@ -44,6 +44,10 @@
 
 .skills-header {
 
+  position: relative;
+
+  z-index: 1;
+
   width:
     min(
       720px,
@@ -147,6 +151,10 @@
 ================================= */
 
 .skills-marquee-wrapper {
+
+  position: relative;
+
+  z-index: 1;
 
   width: 100%;
 

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 
+import StarBackground from "../StarBackground/StarBackground";
 import "./Experience.css";
 
 import inforsaLogo from "../../assets/inforsa-logo.png";
@@ -107,6 +108,11 @@ function Experience() {
       className="experience-section"
       id="experience"
     >
+
+      {/* =================================
+          DREAMY BACKGROUND STARS
+      ================================= */}
+      <StarBackground sectionIndex={2} />
 
       <div className="experience-container">
 

@@ -6,6 +6,7 @@ import {
   useMotionValue,
 } from "motion/react";
 
+import StarBackground from "../StarBackground/StarBackground";
 import "./Skills.css";
 
 import tableauLogo from "../../assets/tableau.png";
@@ -193,6 +194,12 @@ function Skills() {
       className="skills-section"
       id="skills"
     >
+
+      {/* =================================
+          DREAMY BACKGROUND STARS
+      ================================= */}
+      <StarBackground sectionIndex={1} />
+
 
       {/* =================================
           HEADER

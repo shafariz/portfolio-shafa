@@ -1,9 +1,29 @@
+import { useState, useRef } from "react";
 import { motion } from "motion/react";
 
 import "./Hero.css";
 
 
 function Hero() {
+  const [isSeparated, setIsSeparated] = useState(false);
+  const timerRef = useRef(null);
+
+  const handleHeroClick = (e) => {
+    // Jangan picu pemisahan gradient jika user mengklik tombol atau link
+    if (e.target.closest("a, button")) {
+      return;
+    }
+
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+
+    setIsSeparated(true);
+
+    timerRef.current = setTimeout(() => {
+      setIsSeparated(false);
+    }, 2200);
+  };
 
   return (
 
@@ -12,7 +32,19 @@ function Hero() {
       id="home"
     >
 
-      <div className="hero">
+      <div 
+        className="hero"
+        onClick={handleHeroClick}
+      >
+
+        {/* =================================
+            INTERACTIVE DREAMY GRADIENT LAYERS
+        ================================= */}
+        <div className="hero-gradient-bg" aria-hidden="true">
+          <div className={`hero-gradient-layer hero-pink-layer ${isSeparated ? "separated" : ""}`} />
+          <div className={`hero-gradient-layer hero-purple-layer ${isSeparated ? "separated" : ""}`} />
+          <div className={`hero-gradient-layer hero-lavender-layer ${isSeparated ? "separated" : ""}`} />
+        </div>
 
         <div className="hero-container">
 

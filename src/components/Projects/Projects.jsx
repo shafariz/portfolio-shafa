@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 
+import StarBackground from "../StarBackground/StarBackground";
 import "./Projects.css";
 
 import posyanduImage from "../../assets/projects/posyandu.png";
@@ -121,6 +122,11 @@ function Projects() {
       className="projects-section"
       id="projects"
     >
+
+      {/* =================================
+          DREAMY BACKGROUND STARS
+      ================================= */}
+      <StarBackground sectionIndex={3} />
 
       <div className="projects-container">
 
