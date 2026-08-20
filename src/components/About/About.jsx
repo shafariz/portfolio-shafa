@@ -1,4 +1,5 @@
 import { motion, useTransform } from "motion/react";
+import { FaFileAlt, FaExternalLinkAlt } from "react-icons/fa";
 
 import StarBackground from "../StarBackground/StarBackground";
 import "./About.css";
@@ -129,6 +130,30 @@ function About() {
               collaborating on creative projects, and exploring how 
               technology can solve real-world problems. 
             </p>
+
+          </div>
+
+
+          {/* =================================
+              CV BUTTON
+          ================================= */}
+
+          <div className="about-actions">
+
+            <a
+              href="https://drive.google.com/drive/folders/1JZO4gnaTvmbxndsYFXQNc0D-ABfs-JWj?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="about-cv-btn"
+            >
+
+              <FaFileAlt size={15} />
+
+              <span>View CV</span>
+
+              <FaExternalLinkAlt size={12} className="about-cv-arrow" />
+
+            </a>
 
           </div>
 
