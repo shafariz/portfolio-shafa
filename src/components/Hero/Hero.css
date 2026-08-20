@@ -692,68 +692,27 @@
 
 
 /* =================================
-   SCROLL INDICATOR
+   SCROLL INDICATOR (ONLY DOWN ARROW)
 ================================= */
 
 .hero-scroll {
 
-  display: flex;
+  display: inline-flex;
 
-  flex-direction: column;
-
-  align-items: flex-end;
+  align-items: center;
 
   justify-content: center;
 
-  gap: 7px;
+  margin-top: 45px;
 
-  margin-top: 90px;
+  text-decoration: none;
+
+  cursor: pointer;
 }
 
 
 /* =================================
-   SCROLL TEXT
-================================= */
-
-.hero-scroll-text {
-
-  font-family:
-    "Plus Jakarta Sans",
-    sans-serif;
-
-  font-size: 9px;
-
-  font-weight: 700;
-
-  letter-spacing: 2.5px;
-
-  text-transform: uppercase;
-
-  background:
-    linear-gradient(
-      90deg,
-      #df5f91,
-      #f59abb,
-      #9874bd,
-      #df5f91
-    );
-
-  background-size: 200% auto;
-
-  -webkit-background-clip: text;
-
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-
-  animation:
-    scrollRainbow 4s
-    linear infinite;
-}
-
-
-/* =================================
-   ARROW
+   ARROW ICON
 ================================= */
 
 .hero-scroll-arrow {
@@ -764,66 +723,39 @@
 
   justify-content: center;
 
-  font-family:
-    "Plus Jakarta Sans",
-    sans-serif;
+  font-size: 22px;
 
-  font-size: 24px;
+  color: var(--pink-soft);
 
-  font-weight: 400;
+  animation: heroBounce 2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 
-  line-height: 1;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
 
-  background:
-    linear-gradient(
-      180deg,
-      #df5f91,
-      #f59abb,
-      #9874bd,
-      #df5f91
-    );
 
-  background-size:
-    100%
-    200%;
+.hero-scroll:hover .hero-scroll-arrow {
 
-  -webkit-background-clip: text;
+  color: #ffffff;
 
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-
-  animation:
-    arrowRainbow 3s
-    linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 42, 133, 0.8));
 }
 
 
 /* =================================
-   RAINBOW ANIMATION
+   BOUNCE ANIMATION
 ================================= */
 
-@keyframes scrollRainbow {
+@keyframes heroBounce {
 
-  0% {
-    background-position: 0% center;
+  0%, 100% {
+    transform: translateY(0);
   }
 
-  100% {
-    background-position: 200% center;
-  }
-
-}
-
-
-@keyframes arrowRainbow {
-
-  0% {
-    background-position: 0% 0%;
-  }
-
-  100% {
-    background-position: 0% 200%;
+  50% {
+    transform: translateY(10px);
   }
 
 }
@@ -973,25 +905,13 @@
 
   .hero-scroll {
 
-    align-items: center;
-
-    margin-top: 70px;
-
-    gap: 6px;
-  }
-
-
-  .hero-scroll-text {
-
-    font-size: 8px;
-
-    letter-spacing: 2px;
+    margin-top: 36px;
   }
 
 
   .hero-scroll-arrow {
 
-    font-size: 22px;
+    font-size: 20px;
   }
 
 }
@@ -1039,21 +959,13 @@
 
   .hero-scroll {
 
-    margin-top: 60px;
-  }
-
-
-  .hero-scroll-text {
-
-    font-size: 7px;
-
-    letter-spacing: 1.7px;
+    margin-top: 30px;
   }
 
 
   .hero-scroll-arrow {
 
-    font-size: 20px;
+    font-size: 18px;
   }
 
 }

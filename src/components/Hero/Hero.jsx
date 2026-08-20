@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "motion/react";
+import { FaChevronDown } from "react-icons/fa";
 
 import Aurora from "../Aurora/Aurora";
 import StarBackground from "../StarBackground/StarBackground";
@@ -234,6 +235,39 @@ function Hero() {
               </a>
 
             </motion.div>
+
+
+            {/* =================================
+                SCROLL DOWN INDICATOR
+            ================================= */}
+
+            <motion.a
+              href="#about"
+              className="hero-scroll"
+              aria-label="Scroll Down"
+              initial={{
+                opacity: 0,
+                y: 15,
+              }}
+
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+
+              transition={{
+                duration: 0.6,
+                delay: 0.85,
+              }}
+            >
+
+              <div className="hero-scroll-arrow">
+
+                <FaChevronDown />
+
+              </div>
+
+            </motion.a>
 
           </motion.div>
 
